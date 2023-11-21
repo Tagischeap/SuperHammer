@@ -1,10 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700447733
-default_env.tres::Environment::3388419001282685762::1700447679::0::1::::<><>::
-export_presets.cfg::TextFile::-1::1700115558::0::1::::<><>::
+::res://::1700532062
+default_env.tres::Environment::3388419001282685762::1700529757::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1700449457::0::1::::<><>::
 icon.png::CompressedTexture2D::4200905900196603755::1700017454::1700110334::1::::<><>::
-::res://Builds/::1700115535
-::res://Builds/Windows/::1700115763
 ::res://metroidvania assets/::1700447733
 ::res://metroidvania assets/Audio/::1700110600
 1.wav::AudioStreamWAV::210354977028560239::1474819582::1700110599::1::::<><>::
@@ -22,9 +20,9 @@ swing3.wav::AudioStreamWAV::2301508848803444180::1299137246::1700110599::1::::<>
 sword-unsheathe3.wav::AudioStreamWAV::6410356170313588257::1299234490::1700110599::1::::<><>::
 victory-2.wav::AudioStreamWAV::8250493086354469403::1474819582::1700110599::1::::<><>::
 wood-2.wav::AudioStreamWAV::6986824298990746481::1474819582::1700110599::1::::<><>::
-::res://metroidvania assets/Scripts/::1700447679
+::res://metroidvania assets/Scripts/::1700532062
 player.gd::GDScript::-1::1700447679::0::1::::<>CharacterBody2D<>::
-::res://metroidvania assets/Sprites/::1700447733
+::res://metroidvania assets/Sprites/::1700447734
 Player2.png::CompressedTexture2D::6463455733688213801::1678120036::1700447732::1::::<><>::
 Player.png::CompressedTexture2D::1575787947975620886::1678120036::1700447734::1::::<><>::
 Tile.png::CompressedTexture2D::2830773502079771668::1700446015::1700446016::1::::<><>::
@@ -97,13 +95,13 @@ fog1.png::CompressedTexture2D::1487913060791479665::1678120036::1700110599::1:::
 fog2.png::CompressedTexture2D::8802734305393109745::1678120036::1700110599::1::::<><>::
 spikes2.png::CompressedTexture2D::8462764172478396069::1678120036::1700110599::1::::<><>::
 spikesFront.png::CompressedTexture2D::7846537291034989638::1678120036::1700110599::1::::<><>::
-::res://Scenes/::1700447459
-main_scene.tscn::PackedScene::6973013321818621737::1700447459::0::1::::<><>::uid://006yitlwyot4::::res://Scenes/Player/player.tscn<>uid://bqlwccjx4qe7c::::res://metroidvania assets/Sprites/Ground/ground-tileset.png
-::res://Scenes/Player/::1700447679
-player.gd::GDScript::-1::1700447299::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1808256070700016155::1700447679::0::1::::<><>::res://Scenes/Player/player.gd<>uid://cwujetlyd86pe::::res://Sprites/Tile.png
-::res://Sprites/::1700446140
-Tile.png::CompressedTexture2D::6358838094646921718::1700446140::1700446140::1::::<><>::
+::res://Scenes/::1700529756
+main_scene.tscn::PackedScene::6973013321818621737::1700529756::0::1::::<><>::uid://006yitlwyot4::::res://Scenes/Player/player.tscn<>uid://bqlwccjx4qe7c::::res://metroidvania assets/Sprites/Ground/ground-tileset.png
+::res://Scenes/Player/::1700529757
+player.gd::GDScript::-1::1700529754::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::1808256070700016155::1700529757::0::1::::<><>::res://Scenes/Player/player.gd<>uid://cwujetlyd86pe::::res://Sprites/Tile.png
+::res://Sprites/::1700532062
+Tile.png::CompressedTexture2D::2849513384848313238::1700532053::1700532063::1::::<><>::
 ::res://Sprites/Tilesets/::1700110334
 Basic-Yellow.png::CompressedTexture2D::2197703209716044388::1700100683::1700110334::1::::<><>::
 Basic-Yellow.tres::TileSet::-1::1700110317::0::1::::<><>::res://Sprites/Tilesets/Basic-Yellow.png
