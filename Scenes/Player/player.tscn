@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://006yitlwyot4"]
+[gd_scene load_steps=14 format=3 uid="uid://006yitlwyot4"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_3edcd"]
 [ext_resource type="Texture2D" uid="uid://bgulcl6caxpxu" path="res://Sprites/PlayerSheet.png" id="2_huvav"]
@@ -100,6 +100,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_n20ch"]
 resource_name = "Swing X"
+length = 0.3
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -107,10 +109,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+"values": [28, 29, 30, 31, 32, 33]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -119,7 +121,7 @@ tracks/1/path = NodePath("Hammer/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.8),
+"times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
@@ -131,9 +133,12 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.1, 0.25),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [],
+"method": &"ShoveX"
+}, {
 "args": [],
 "method": &"OnStateFinished"
 }]
@@ -155,6 +160,52 @@ tracks/0/keys = {
 "values": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 }
 
+[sub_resource type="Animation" id="Animation_yv8ce"]
+resource_name = "Swing Y"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [28, 29, 30, 31, 32, 33]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hammer/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"ShoveY"
+}, {
+"args": [],
+"method": &"OnStateFinished"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xdqy2"]
 _data = {
 "Dead": SubResource("Animation_jg7w6"),
@@ -163,6 +214,7 @@ _data = {
 "Jump": SubResource("Animation_x0oqb"),
 "RESET": SubResource("Animation_0vy0m"),
 "Swing X": SubResource("Animation_n20ch"),
+"Swing Y": SubResource("Animation_yv8ce"),
 "Walk": SubResource("Animation_qd7xv")
 }
 

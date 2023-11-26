@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700968018
-default_env.tres::Environment::3388419001282685762::1700968018::0::1::::<><>::
+::res://::1700978135
+default_env.tres::Environment::3388419001282685762::1700969530::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1700449457::0::1::::<><>::
 icon.png::CompressedTexture2D::4200905900196603755::1700017454::1700110334::1::::<><>::
 ::res://metroidvania assets/::1700447733
@@ -95,13 +95,12 @@ fog1.png::CompressedTexture2D::1487913060791479665::1678120036::1700110599::1:::
 fog2.png::CompressedTexture2D::8802734305393109745::1678120036::1700110599::1::::<><>::
 spikes2.png::CompressedTexture2D::8462764172478396069::1678120036::1700110599::1::::<><>::
 spikesFront.png::CompressedTexture2D::7846537291034989638::1678120036::1700110599::1::::<><>::
-::res://Scenes/::1700967900
-main_scene.tscn::PackedScene::6973013321818621737::1700967900::0::1::::<><>::uid://006yitlwyot4::::res://Scenes/Player/player.tscn<>uid://bqlwccjx4qe7c::::res://metroidvania assets/Sprites/Ground/ground-tileset.png
-::res://Scenes/Player/::1700968018
+::res://Scenes/::1700969530
+main_scene.tscn::PackedScene::6973013321818621737::1700969530::0::1::::<><>::uid://006yitlwyot4::::res://Scenes/Player/player.tscn<>uid://bqlwccjx4qe7c::::res://metroidvania assets/Sprites/Ground/ground-tileset.png<>uid://6kt36q5athdk::::res://Sprites/Tilesets/Basic-Yellow.png
+::res://Scenes/Player/::1700969529
 player.gd::GDScript::-1::1700963292::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1808256070700016155::1700968018::0::1::::<><>::res://Scenes/Player/player.gd<>uid://bgulcl6caxpxu::::res://Sprites/PlayerSheet.png
+player.tscn::PackedScene::1808256070700016155::1700969529::0::1::::<><>::res://Scenes/Player/player.gd<>uid://bgulcl6caxpxu::::res://Sprites/PlayerSheet.png
 ::res://Sprites/::1700968018
 PlayerSheet.png::CompressedTexture2D::2849513384848313238::1700967778::1700968018::1::::<><>::
-::res://Sprites/Tilesets/::1700110334
+::res://Sprites/Tilesets/::1700968286
 Basic-Yellow.png::CompressedTexture2D::2197703209716044388::1700100683::1700110334::1::::<><>::
-Basic-Yellow.tres::TileSet::-1::1700110317::0::1::::<><>::res://Sprites/Tilesets/Basic-Yellow.png
