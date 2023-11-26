@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-enum States {MOVE, SWINGX}
+enum States {MOVE, JUMP, SWINGX, SWINGY}
 var CurrentState = States.MOVE
 
 const SPEED = 125.0
@@ -12,7 +12,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	$Hammer/CollisionShape2D.disabled = true
-
 func _physics_process(delta):
 	match CurrentState:
 		States.MOVE:
@@ -33,7 +32,6 @@ func Move(delta):
 		if velocity.x == 0: 
 			pressed = 2
 			$AnimationPlayer.play("Idle")
-
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_select"):
 		pressed -= 1
@@ -66,8 +64,9 @@ func Move(delta):
 func Jump():
 		$AnimationPlayer.play("Jump")
 		velocity.y = JUMP_VELOCITY
-	
+
 func SwingX():
 	$AnimationPlayer.play("Swing X")
+	
 func OnStateFinished():
 	CurrentState = States.MOVE

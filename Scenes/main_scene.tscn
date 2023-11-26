@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6l1rmkhddwub"]
+[gd_scene load_steps=8 format=3 uid="uid://c6l1rmkhddwub"]
 
 [ext_resource type="PackedScene" uid="uid://006yitlwyot4" path="res://Scenes/Player/player.tscn" id="1_nh1ff"]
 [ext_resource type="Texture2D" uid="uid://bqlwccjx4qe7c" path="res://metroidvania assets/Sprites/Ground/ground-tileset.png" id="2_m84s5"]
+[ext_resource type="Texture2D" uid="uid://6kt36q5athdk" path="res://Sprites/Tilesets/Basic-Yellow.png" id="3_ydjnu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gh18p"]
 texture = ExtResource("2_m84s5")
@@ -305,6 +306,58 @@ terrain_set_0/terrain_0/name = "Ground0"
 terrain_set_0/terrain_0/color = Color(0.501961, 0.345098, 0.25098, 1)
 sources/0 = SubResource("TileSetAtlasSource_gh18p")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jdj2r"]
+texture = ExtResource("3_ydjnu")
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_cufug"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jdj2r")
+
 [node name="MainScene" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -318,3 +371,7 @@ layer_0/tile_data = PackedInt32Array(2293760, 0, 2, 2293761, 131072, 1, 2293762,
 
 [node name="Player" parent="." instance=ExtResource("1_nh1ff")]
 position = Vector2(625, 474)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_cufug")
+format = 2
