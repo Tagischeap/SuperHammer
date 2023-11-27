@@ -1,20 +1,27 @@
 extends CharacterBody2D
 
-enum States {MOVE, JUMP, SWINGX, SWINGY}
+enum States {MOVE, JUMP, SWINGX, SWINGY, POUND}
+var CurrentState = States.MOVE
+#TODO: Have Movement States be different than Action States
 enum LegStates {IDLE, MOVE, JUMP, FALL}
-enum ArmStates {IDLE, SWINGX, SWINGY}
-enum DirectionStates {LEFT, RIGHT}
-
 var CurrentLegState = LegStates.IDLE
+
+enum ArmStates {IDLE, SWINGX, SWINGY, POUND}
 var CurrentArmState = ArmStates.IDLE
+
+enum DirectionStates {LEFT, RIGHT}
 var CurrentDirectionState = DirectionStates.RIGHT
 
-var CurrentState = States.MOVE
 
 const SPEED = 125.0
 const JUMP_VELOCITY = -250.0
+#TODO: Differnt charges
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+var chargX = 1
+var chargY = 1
+var chargP = 1
 
 func _ready():
 	$Hammer/CollisionShape2D.disabled = true
@@ -27,8 +34,14 @@ func _physics_process(delta):
 			SwingX()
 		States.SWINGY:
 			SwingY()
-	# Add the gravity.
-	if not is_on_floor():
+		States.POUND:
+			Pound()
+	if is_on_floor():
+		chargX = 1
+		chargY = 1
+		chargP = 1
+	else:
+		# Add the gravity.
 		velocity.y += gravity * delta
 	move_and_slide()
 	
@@ -60,7 +73,10 @@ func Move(delta):
 	if Input.is_action_just_pressed("ui_action"):
 			CurrentState = States.SWINGX
 	if Input.is_action_just_pressed("ui_action2"):
+		if chargY > 0:
 			CurrentState = States.SWINGY
+		else:
+			CurrentState = States.POUND
 
 func PushPlayer(dir):
 	velocity += dir
@@ -69,22 +85,52 @@ func Jump():
 		$AnimationPlayer.play("Jump")
 		velocity.y = JUMP_VELOCITY
 
+
 func SwingX():
-	$AnimationPlayer.play("Swing X")
+	if chargX > 0:
+		$AnimationPlayer.play("Swing X")
+		chargX = 0
 func ShoveX():
-	if CurrentDirectionState == DirectionStates.RIGHT:
-		PushPlayer(Vector2(300,-100))
+	var m = 1
+	if not is_on_floor():
+		m = 1.5
 	else:
-		PushPlayer(Vector2(-300,-100))
+		m = 1
+	if CurrentDirectionState == DirectionStates.RIGHT:
+		PushPlayer(Vector2(300*m,-70*m))
+	else:
+		PushPlayer(Vector2(-300*m,-70*m))
 		
 func SwingY():
-	$AnimationPlayer.play("Swing Y")
+	if chargY > 0:
+		$AnimationPlayer.play("Swing Y")
+		chargY = 0
 func ShoveY():
-	if CurrentDirectionState == DirectionStates.RIGHT:
-		PushPlayer(Vector2(100,-250))
+	var m = 1
+	if not is_on_floor():
+		m = 1.5
 	else:
-		PushPlayer(Vector2(-100,-250))
-		
+		m = 1
+	if CurrentDirectionState == DirectionStates.RIGHT:
+		PushPlayer(Vector2(100*m,-250*m))
+	else:
+		PushPlayer(Vector2(-100*m,-250*m))
+
+func Pound():
+	if chargP > 0:
+		$AnimationPlayer.play("Pound")
+		chargP = 0
+func ShoveP():
+	var m = 1
+	if not is_on_floor():
+		m = 1.5
+	else:
+		m = 0
+	if CurrentDirectionState == DirectionStates.RIGHT:
+		PushPlayer(Vector2(100,250*m))
+	else:
+		PushPlayer(Vector2(-100,250*m))
+	
 func ChangeDirection(dir):
 	if dir == null:
 		if CurrentDirectionState == DirectionStates.RIGHT:
