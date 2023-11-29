@@ -85,7 +85,6 @@ func Jump():
 		$AnimationPlayer.play("Jump")
 		velocity.y = JUMP_VELOCITY
 
-
 func SwingX():
 	if chargX > 0:
 		$AnimationPlayer.play("Swing X")
@@ -97,9 +96,9 @@ func ShoveX():
 	else:
 		m = 1
 	if CurrentDirectionState == DirectionStates.RIGHT:
-		PushPlayer(Vector2(300*m,-70*m))
+		PushPlayer(Vector2(-JUMP_VELOCITY*m,-70*m))
 	else:
-		PushPlayer(Vector2(-300*m,-70*m))
+		PushPlayer(Vector2(JUMP_VELOCITY*m,-70*m))
 		
 func SwingY():
 	if chargY > 0:
@@ -112,9 +111,9 @@ func ShoveY():
 	else:
 		m = 1
 	if CurrentDirectionState == DirectionStates.RIGHT:
-		PushPlayer(Vector2(100*m,-250*m))
+		PushPlayer(Vector2(100*m,JUMP_VELOCITY*m))
 	else:
-		PushPlayer(Vector2(-100*m,-250*m))
+		PushPlayer(Vector2(-100*m,JUMP_VELOCITY*m))
 
 func Pound():
 	if chargP > 0:
@@ -127,9 +126,9 @@ func ShoveP():
 	else:
 		m = 0
 	if CurrentDirectionState == DirectionStates.RIGHT:
-		PushPlayer(Vector2(100,250*m))
+		PushPlayer(Vector2(100,-JUMP_VELOCITY*m))
 	else:
-		PushPlayer(Vector2(-100,250*m))
+		PushPlayer(Vector2(-100,-JUMP_VELOCITY*m))
 	
 func ChangeDirection(dir):
 	if dir == null:
