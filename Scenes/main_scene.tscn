@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c6l1rmkhddwub"]
+[gd_scene load_steps=9 format=3 uid="uid://c6l1rmkhddwub"]
 
 [ext_resource type="PackedScene" uid="uid://006yitlwyot4" path="res://Scenes/Player/player.tscn" id="1_nh1ff"]
 [ext_resource type="Texture2D" uid="uid://bqlwccjx4qe7c" path="res://metroidvania assets/Sprites/Ground/ground-tileset.png" id="2_m84s5"]
 [ext_resource type="Texture2D" uid="uid://6kt36q5athdk" path="res://Sprites/Tilesets/Basic-Yellow.png" id="3_ydjnu"]
+[ext_resource type="PackedScene" uid="uid://c1f0ffnr811qp" path="res://Scenes/Interactable/create.tscn" id="4_k2yph"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gh18p"]
 texture = ExtResource("2_m84s5")
@@ -375,3 +376,6 @@ position = Vector2(26, 588)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_cufug")
 format = 2
+
+[node name="Create" parent="." instance=ExtResource("4_k2yph")]
+position = Vector2(286, 560)

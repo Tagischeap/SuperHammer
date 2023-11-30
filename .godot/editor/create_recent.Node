@@ -1,6 +1,7 @@
-TileMap
+AnimationPlayer
 CollisionShape2D
 Area2D
-AnimationPlayer
 Sprite2D
+StaticBody2D
+TileMap
 CharacterBody2D

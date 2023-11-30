@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701202583
-default_env.tres::Environment::3388419001282685762::1701054098::0::1::::<><>::
+::res://::1701314610
+default_env.tres::Environment::3388419001282685762::1701314593::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1701045739::0::1::::<><>::
 icon.png::CompressedTexture2D::4200905900196603755::1700017454::1700110334::1::::<><>::
 ::res://metroidvania assets/::1700447733
@@ -95,11 +95,14 @@ fog1.png::CompressedTexture2D::1487913060791479665::1678120036::1700110599::1:::
 fog2.png::CompressedTexture2D::8802734305393109745::1678120036::1700110599::1::::<><>::
 spikes2.png::CompressedTexture2D::8462764172478396069::1678120036::1700110599::1::::<><>::
 spikesFront.png::CompressedTexture2D::7846537291034989638::1678120036::1700110599::1::::<><>::
-::res://Scenes/::1701053897
-main_scene.tscn::PackedScene::6973013321818621737::1701053897::0::1::::<><>::uid://006yitlwyot4::::res://Scenes/Player/player.tscn<>uid://bqlwccjx4qe7c::::res://metroidvania assets/Sprites/Ground/ground-tileset.png<>uid://6kt36q5athdk::::res://Sprites/Tilesets/Basic-Yellow.png
-::res://Scenes/Player/::1701054098
+::res://Scenes/::1701314593
+main_scene.tscn::PackedScene::6973013321818621737::1701314593::0::1::::<><>::uid://006yitlwyot4::::res://Scenes/Player/player.tscn<>uid://bqlwccjx4qe7c::::res://metroidvania assets/Sprites/Ground/ground-tileset.png<>uid://6kt36q5athdk::::res://Sprites/Tilesets/Basic-Yellow.png<>uid://c1f0ffnr811qp::::res://Scenes/Interactable/create.tscn
+::res://Scenes/Interactable/::1701314593
+Create.gd::GDScript::-1::1701314290::0::1::::<>StaticBody2D<>::
+create.tscn::PackedScene::6609600328050790999::1701314504::0::1::::<><>::res://Scenes/Interactable/Create.gd<>uid://c6wxrf2x1hkuu::::res://metroidvania assets/Sprites/Interactables/Crates.png
+::res://Scenes/Player/::1701314528
 player.gd::GDScript::-1::1701054098::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1808256070700016155::1701054098::0::1::::<><>::res://Scenes/Player/player.gd<>uid://bgulcl6caxpxu::::res://Sprites/PlayerSheet.png
+player.tscn::PackedScene::1808256070700016155::1701314528::0::1::::<><>::res://Scenes/Player/player.gd<>uid://bgulcl6caxpxu::::res://Sprites/PlayerSheet.png
 ::res://Sprites/::1701031701
 PlayerSheet.png::CompressedTexture2D::2849513384848313238::1701031701::1701031701::1::::<><>::
 ::res://Sprites/Tilesets/::1700968286
