@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c6l1rmkhddwub"]
+[gd_scene load_steps=19 format=3 uid="uid://c6l1rmkhddwub"]
 
 [ext_resource type="PackedScene" uid="uid://006yitlwyot4" path="res://Scenes/Player/player.tscn" id="1_nh1ff"]
 [ext_resource type="Texture2D" uid="uid://bqlwccjx4qe7c" path="res://metroidvania assets/Sprites/Ground/ground-tileset.png" id="2_m84s5"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cdbcipawpfmxv" path="res://metroidvania assets/Sprites/World 1/Pyramide.png" id="11_nci1t"]
 [ext_resource type="Texture2D" uid="uid://cicrqtdrxcmvl" path="res://metroidvania assets/Sprites/World 1/Towers.png" id="12_ajmcc"]
 [ext_resource type="Texture2D" uid="uid://csr6lcmpuwhyx" path="res://metroidvania assets/Sprites/World 1/Trees.png" id="13_np8vp"]
+[ext_resource type="PackedScene" uid="uid://c6ey0ltretlvl" path="res://Scenes/enemy.tscn" id="14_0tish"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gh18p"]
 texture = ExtResource("2_m84s5")
@@ -452,3 +453,6 @@ format = 2
 
 [node name="Create" parent="." instance=ExtResource("4_k2yph")]
 position = Vector2(208, 592)
+
+[node name="Enemy" parent="." instance=ExtResource("14_0tish")]
+position = Vector2(476, 624)
