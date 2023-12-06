@@ -24,7 +24,7 @@ var chargY = 1
 var chargP = 1
 
 func _ready():
-	$Hammer/CollisionShape2D.disabled = true
+	$HurtBox/CollisionShape2D.disabled = true
 	
 func _physics_process(delta):
 	match CurrentState:
@@ -139,11 +139,11 @@ func ChangeDirection(dir):
 	if dir == DirectionStates.RIGHT:
 			CurrentDirectionState = DirectionStates.RIGHT
 			$Sprite2D.flip_h = false
-			$Hammer/CollisionShape2D.position.x = 28
+			$HurtBox/CollisionShape2D.position.x = 28
 	elif dir == DirectionStates.LEFT:
 			CurrentDirectionState = DirectionStates.LEFT
 			$Sprite2D.flip_h = true
-			$Hammer/CollisionShape2D.position.x = -28
+			$HurtBox/CollisionShape2D.position.x = -28
 
 func OnStateFinished():
 	CurrentState = States.MOVE

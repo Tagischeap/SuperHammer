@@ -3,7 +3,7 @@ extends StaticBody2D
 var health = 3
 
 func _on_hitbox_area_entered(area):
-	if area.name == "Hammer":
+	if area.name == "HurtBox":
 		$AnimationPlayer.play("Hurt")
 		health -= 1
 		await $AnimationPlayer.animation_finished

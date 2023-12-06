@@ -90,7 +90,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hammer/CollisionShape2D:disabled")
+tracks/1/path = NodePath("HurtBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -134,7 +134,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hammer/CollisionShape2D:disabled")
+tracks/1/path = NodePath("HurtBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -162,7 +162,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hammer/CollisionShape2D:disabled")
+tracks/1/path = NodePath("HurtBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -208,7 +208,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hammer/CollisionShape2D:disabled")
+tracks/1/path = NodePath("HurtBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -287,11 +287,11 @@ libraries = {
 "": SubResource("AnimationLibrary_xdqy2")
 }
 
-[node name="Hammer" type="Area2D" parent="."]
+[node name="HurtBox" type="Area2D" parent="."]
 light_mask = 8
-visibility_layer = 17
+visibility_layer = 49
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hammer"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(28, 6)
 shape = SubResource("RectangleShape2D_tp0mk")
 disabled = true

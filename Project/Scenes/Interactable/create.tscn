@@ -86,7 +86,7 @@ light_mask = 17
 visibility_layer = 8
 z_index = 1
 position = Vector2(475, 337)
-scale = Vector2(2, 2)
+scale = Vector2(5, 5)
 script = ExtResource("1_hjx31")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
