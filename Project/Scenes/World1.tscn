@@ -192,7 +192,7 @@ texture = ExtResource("16_ycbjh")
 
 [node name="Create" parent="Node" instance=ExtResource("3_rjk44")]
 position = Vector2(542, 424)
-scale = Vector2(8, 8)
+scale = Vector2(3, 3)
 
 [node name="Enemy" parent="Node" instance=ExtResource("4_gu4r7")]
-position = Vector2(274, 507)
+position = Vector2(284, 520)

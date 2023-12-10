@@ -73,7 +73,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-0.5, 12.5), Vector2(-0.5, 13.5)]
+"values": [Vector2(-0.5, -3.5), Vector2(-0.5, -2.5)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -158,6 +158,7 @@ shape = SubResource("RectangleShape2D_l515i")
 disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
 texture = ExtResource("1_aple3")
 hframes = 7
 vframes = 2
@@ -171,11 +172,11 @@ libraries = {
 }
 
 [node name="RayCast2D - y" type="RayCast2D" parent="."]
-position = Vector2(6, 16)
+position = Vector2(6, 0)
 target_position = Vector2(0, 15)
 
 [node name="RayCast2D - x" type="RayCast2D" parent="."]
-position = Vector2(6, 10)
+position = Vector2(6, 0)
 target_position = Vector2(20, 0)
 
 [node name="HitBox" type="Area2D" parent="."]
@@ -183,7 +184,7 @@ collision_layer = 40
 collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, 11)
+position = Vector2(-0.5, -4)
 shape = SubResource("CircleShape2D_wgad6")
 debug_color = Color(0.984314, 0.117647, 0, 0.419608)
 

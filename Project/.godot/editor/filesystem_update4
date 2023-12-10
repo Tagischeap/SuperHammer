@@ -1,8 +1,6 @@
 res://default_env.tres
-res://Scenes/enemy.tscn
-res://Scenes/enemy.gd
+res://Scenes/Interactable/create.tscn
+res://Scenes/Interactable/Create.gd
 res://Scenes/Player/player.tscn
 res://Scenes/World1.tscn
-res://Scenes/Interactable/create.tscn
-res://Scenes/Player/player.gd
-res://Scenes/Interactable/Create.gd
+res://Scenes/enemy.tscn
