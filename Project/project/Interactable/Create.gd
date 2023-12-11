@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends StaticBody2D
 
 var health = 3
 
@@ -24,9 +24,4 @@ func _on_hitbox_area_entered(area):
 func _physics_process(delta):
 	floor_detection(delta)
 func floor_detection(delta):
-	if is_on_floor():
-		pass
-	else:
-		# Add the gravity.
-		velocity.y += gravity * delta
 		

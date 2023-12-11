@@ -1,9 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://c6l1rmkhddwub"]
+[gd_scene load_steps=28 format=3 uid="uid://c6l1rmkhddwub"]
 
-[ext_resource type="PackedScene" uid="uid://006yitlwyot4" path="res://Scenes/Player/player.tscn" id="1_iobd8"]
+[ext_resource type="PackedScene" uid="uid://006yitlwyot4" path="res://project/Player/player.tscn" id="1_iobd8"]
 [ext_resource type="Texture2D" uid="uid://hgsgfilg20wn" path="res://Sprites/000.png" id="2_3qe5q"]
-[ext_resource type="PackedScene" uid="uid://c1f0ffnr811qp" path="res://Scenes/Interactable/create.tscn" id="3_7qdqt"]
-[ext_resource type="PackedScene" uid="uid://c6ey0ltretlvl" path="res://Scenes/enemy.tscn" id="4_t10c4"]
+[ext_resource type="PackedScene" uid="uid://c6ey0ltretlvl" path="res://project/enemy.tscn" id="4_t10c4"]
 [ext_resource type="Texture2D" uid="uid://bqlwccjx4qe7c" path="res://metroidvania assets/Sprites/Ground/ground-tileset.png" id="5_ntqly"]
 [ext_resource type="Texture2D" uid="uid://dimr7bojwhjae" path="res://metroidvania assets/Sprites/World 1/background.png" id="6_86pwn"]
 [ext_resource type="Texture2D" uid="uid://bblshqy8fog5s" path="res://metroidvania assets/Sprites/World 1/Cloud-or-tree.png" id="7_y1x2t"]
@@ -491,9 +490,6 @@ debug_color = Color(0.478431, 0.584314, 0.196078, 0.419608)
 position = Vector2(800, 520)
 shape = SubResource("RectangleShape2D_1u4ni")
 debug_color = Color(0.478431, 0.584314, 0.196078, 0.419608)
-
-[node name="Create" parent="Node" instance=ExtResource("3_7qdqt")]
-position = Vector2(208, 592)
 
 [node name="Enemy" parent="Node" instance=ExtResource("4_t10c4")]
 position = Vector2(269, 526)

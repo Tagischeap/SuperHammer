@@ -1,10 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c6ey0ltretlvl"]
 
 [ext_resource type="Texture2D" uid="uid://dptbkrfhen0o5" path="res://metroidvania assets/Sprites/Enemies/Enemy2.png" id="1_aple3"]
-[ext_resource type="Script" path="res://Scenes/enemy.gd" id="1_vfjm1"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l515i"]
-size = Vector2(13, 7)
+[ext_resource type="Script" path="res://project/enemy.gd" id="1_vfjm1"]
 
 [sub_resource type="Animation" id="Animation_18p34"]
 resource_name = "Death"
@@ -146,16 +143,14 @@ _data = {
 "RESET": SubResource("Animation_aufci")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l515i"]
+size = Vector2(13, 7)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_wgad6"]
 
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_vfjm1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 12.5)
-shape = SubResource("RectangleShape2D_l515i")
-disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -16)
@@ -171,6 +166,11 @@ libraries = {
 "": SubResource("AnimationLibrary_g0rv5")
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 12.5)
+shape = SubResource("RectangleShape2D_l515i")
+disabled = true
+
 [node name="RayCast2D - y" type="RayCast2D" parent="."]
 position = Vector2(6, 0)
 target_position = Vector2(0, 15)
@@ -180,8 +180,6 @@ position = Vector2(6, 0)
 target_position = Vector2(20, 0)
 
 [node name="HitBox" type="Area2D" parent="."]
-collision_layer = 40
-collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(-0.5, -4)

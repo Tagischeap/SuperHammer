@@ -1,0 +1,132 @@
+[gd_scene load_steps=12 format=3 uid="uid://cpg128yuxehlr"]
+
+[ext_resource type="Script" path="res://Prefabs/Scripts/Crate.gd" id="1_floe4"]
+[ext_resource type="Texture2D" uid="uid://era05nbj7wus" path="res://Sprites/Crate.png" id="2_dda24"]
+
+[sub_resource type="Animation" id="Animation_j5o5g"]
+resource_name = "Active"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_30kgl"]
+resource_name = "Destroyed"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_8jslm"]
+resource_name = "Hurt"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ysdfj"]
+resource_name = "Hurt 2"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_66bn8"]
+resource_name = "Hurt 3"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_ilfhn"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_to46t"]
+_data = {
+"Active": SubResource("Animation_j5o5g"),
+"Destroyed": SubResource("Animation_30kgl"),
+"Hurt": SubResource("Animation_8jslm"),
+"Hurt 2": SubResource("Animation_ysdfj"),
+"Hurt 3": SubResource("Animation_66bn8"),
+"RESET": SubResource("Animation_ilfhn")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60jbb"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p44ts"]
+size = Vector2(26, 27)
+
+[node name="Crate" type="CharacterBody2D"]
+script = ExtResource("1_floe4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dda24")
+vframes = 5
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Active"
+libraries = {
+"": SubResource("AnimationLibrary_to46t")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_60jbb")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Hitbox" type="Area2D" parent="."]
+light_mask = 16
+visibility_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_p44ts")
+debug_color = Color(0.854902, 0.313726, 0.486275, 0.419608)
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

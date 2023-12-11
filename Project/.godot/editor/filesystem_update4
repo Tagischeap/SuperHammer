@@ -1,6 +1,14 @@
 res://default_env.tres
-res://Scenes/Interactable/create.tscn
-res://Scenes/Interactable/Create.gd
-res://Scenes/Player/player.tscn
 res://Scenes/World1.tscn
+res://Scenes/Interactable/create.tscn
+res://Scenes/Player/player.tscn
 res://Scenes/enemy.tscn
+res://Prefabs/crate.tscn
+res://Scenes/Interactable/Create.gd
+res://project/World0a.tscn
+res://Prefabs/Scenes/World1.tscn
+res://Prefabs/Scenes/crate.tscn
+res://project/Player/player.tscn
+res://project/enemy.tscn
+res://Prefabs/Scripts/Crate.gd
+res://project/enemy.gd

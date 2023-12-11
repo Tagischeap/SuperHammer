@@ -1,10 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://006yitlwyot4"]
 
-[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_3edcd"]
+[ext_resource type="Script" path="res://project/Player/player.gd" id="1_3edcd"]
 [ext_resource type="Texture2D" uid="uid://bgulcl6caxpxu" path="res://Sprites/PlayerSheet.png" id="2_huvav"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpse6"]
-size = Vector2(17, 56)
 
 [sub_resource type="Animation" id="Animation_jg7w6"]
 resource_name = "Dead"
@@ -264,6 +261,9 @@ _data = {
 "Walk": SubResource("Animation_qd7xv")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpse6"]
+size = Vector2(17, 56)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tp0mk"]
 size = Vector2(20, 38)
 
@@ -277,19 +277,18 @@ hframes = 5
 vframes = 8
 frame = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 4)
-shape = SubResource("RectangleShape2D_qpse6")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
 libraries = {
 "": SubResource("AnimationLibrary_xdqy2")
 }
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_qpse6")
+
 [node name="HurtBox" type="Area2D" parent="."]
-light_mask = 8
-visibility_layer = 49
+visibility_layer = 33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(28, 6)

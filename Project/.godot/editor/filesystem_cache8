@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702207505
-default_env.tres::Environment::3388419001282685762::1702099529::0::1::::<><>::
+::res://::1702319777
+default_env.tres::Environment::3388419001282685762::1702319777::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1701843622::0::1::::<><>::
 icon.png::CompressedTexture2D::4200905900196603755::1700017454::1700110334::1::::<><>::
 ::res://metroidvania assets/::1700447733
@@ -95,17 +95,23 @@ fog1.png::CompressedTexture2D::1487913060791479665::1678120036::1700110599::1:::
 fog2.png::CompressedTexture2D::8802734305393109745::1678120036::1700110599::1::::<><>::
 spikes2.png::CompressedTexture2D::8462764172478396069::1678120036::1700110599::1::::<><>::
 spikesFront.png::CompressedTexture2D::7846537291034989638::1678120036::1700110599::1::::<><>::
-::res://Scenes/::1702207505
+::res://Prefabs/::1702319765
+crate.tscn::PackedScene::5839688918013877427::1702319765::0::1::::<><>::uid://era05nbj7wus::::res://Sprites/Crate.png
+::res://Prefabs/Scenes/::1702319777
+-crate.tscn::PackedScene::6276297598087768296::1702319751::0::1::::<><>::res://Prefabs/Scripts/Crate.gd<>uid://era05nbj7wus::::res://Sprites/Crate.png
+World1.tscn::PackedScene::2299652947840273411::1702319777::0::1::::<><>::uid://006yitlwyot4::::res://project/Player/player.tscn<>uid://hgsgfilg20wn::::res://Sprites/000.png<>uid://c1f0ffnr811qp::::res://project/Interactable/create.tscn<>uid://c6ey0ltretlvl::::res://project/enemy.tscn<>uid://cvojx7mf4n81y::::res://Prefabs/Scenes/-crate.tscn<>uid://8yksktejigjq::::res://Sprites/1-0.png<>uid://fvfb10gtgdrs::::res://Sprites/1-1.png
+::res://Prefabs/Scripts/::1702319750
+Crate.gd::GDScript::-1::1702318888::0::1::::<>CharacterBody2D<>::
+::res://project/::1702319427
 enemy.gd::GDScript::-1::1701843399::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::6958455491742105913::1702099529::0::1::::<><>::uid://dptbkrfhen0o5::::res://metroidvania assets/Sprites/Enemies/Enemy2.png<>res://Scenes/enemy.gd
-World0a.tscn::PackedScene::6973013321818621737::1702099488::0::1::::<><>::uid://006yitlwyot4::::res://Scenes/Player/player.tscn<>uid://hgsgfilg20wn::::res://Sprites/000.png<>uid://c1f0ffnr811qp::::res://Scenes/Interactable/create.tscn<>uid://c6ey0ltretlvl::::res://Scenes/enemy.tscn<>uid://bqlwccjx4qe7c::::res://metroidvania assets/Sprites/Ground/ground-tileset.png<>uid://dimr7bojwhjae::::res://metroidvania assets/Sprites/World 1/background.png<>uid://bblshqy8fog5s::::res://metroidvania assets/Sprites/World 1/Cloud-or-tree.png<>uid://bui7fbpctjw2p::::res://metroidvania assets/Sprites/World 1/hill1.png<>uid://c53a58rkpefqu::::res://metroidvania assets/Sprites/World 1/hill2.png<>uid://cdbcipawpfmxv::::res://metroidvania assets/Sprites/World 1/Pyramide.png<>uid://cicrqtdrxcmvl::::res://metroidvania assets/Sprites/World 1/Towers.png<>uid://csr6lcmpuwhyx::::res://metroidvania assets/Sprites/World 1/Trees.png<>uid://c8ph3263eso47::::res://metroidvania assets/Sprites/World 1/grass-ground.png<>uid://b5f6gv0lkhi1::::res://metroidvania assets/Sprites/World 1/Foreground.png<>uid://8yksktejigjq::::res://Sprites/1-0.png<>uid://fvfb10gtgdrs::::res://Sprites/1-1.png
-World1.tscn::PackedScene::2299652947840273411::1702099529::0::1::::<><>::uid://006yitlwyot4::::res://Scenes/Player/player.tscn<>uid://hgsgfilg20wn::::res://Sprites/000.png<>uid://c1f0ffnr811qp::::res://Scenes/Interactable/create.tscn<>uid://c6ey0ltretlvl::::res://Scenes/enemy.tscn<>uid://8yksktejigjq::::res://Sprites/1-0.png<>uid://fvfb10gtgdrs::::res://Sprites/1-1.png
-::res://Scenes/Interactable/::1702099529
-Create.gd::GDScript::-1::1701843540::0::1::::<>StaticBody2D<>::
-create.tscn::PackedScene::6609600328050790999::1702099529::0::1::::<><>::res://Scenes/Interactable/Create.gd<>uid://c6wxrf2x1hkuu::::res://metroidvania assets/Sprites/Interactables/Crates.png
-::res://Scenes/Player/::1702099529
+enemy.tscn::PackedScene::6958455491742105913::1702319328::0::1::::<><>::uid://dptbkrfhen0o5
+World0a.tscn::PackedScene::6973013321818621737::1702319427::0::1::::<><>::uid://006yitlwyot4::::res://project/Player/player.tscn<>uid://hgsgfilg20wn::::res://Sprites/000.png<>uid://c6ey0ltretlvl::::res://project/enemy.tscn<>uid://bqlwccjx4qe7c::::res://metroidvania assets/Sprites/Ground/ground-tileset.png<>uid://dimr7bojwhjae::::res://metroidvania assets/Sprites/World 1/background.png<>uid://bblshqy8fog5s::::res://metroidvania assets/Sprites/World 1/Cloud-or-tree.png<>uid://bui7fbpctjw2p::::res://metroidvania assets/Sprites/World 1/hill1.png<>uid://c53a58rkpefqu::::res://metroidvania assets/Sprites/World 1/hill2.png<>uid://cdbcipawpfmxv::::res://metroidvania assets/Sprites/World 1/Pyramide.png<>uid://cicrqtdrxcmvl::::res://metroidvania assets/Sprites/World 1/Towers.png<>uid://csr6lcmpuwhyx::::res://metroidvania assets/Sprites/World 1/Trees.png<>uid://c8ph3263eso47::::res://metroidvania assets/Sprites/World 1/grass-ground.png<>uid://b5f6gv0lkhi1::::res://metroidvania assets/Sprites/World 1/Foreground.png<>uid://8yksktejigjq::::res://Sprites/1-0.png<>uid://fvfb10gtgdrs::::res://Sprites/1-1.png
+::res://project/Interactable/::1702319328
+Create.gd::GDScript::-1::1702319158::0::1::::<>StaticBody2D<>::
+create.tscn::PackedScene::6609600328050790999::1702319328::0::1::::<><>::res://project/Interactable/Create.gd<>uid://era05nbj7wus
+::res://project/Player/::1702319328
 player.gd::GDScript::-1::1701843281::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1808256070700016155::1702099529::0::1::::<><>::res://Scenes/Player/player.gd<>uid://bgulcl6caxpxu::::res://Sprites/PlayerSheet.png
+player.tscn::PackedScene::1808256070700016155::1702319328::0::1::::<><>::res://project/Player/player.gd<>uid://bgulcl6caxpxu
 ::res://Sprites/::1702207505
 000.png::CompressedTexture2D::504812068107895669::1701771175::1701771179::1::::<><>::
 1-0.png::CompressedTexture2D::2366416775149331818::1701785595::1701785596::1::::<><>::

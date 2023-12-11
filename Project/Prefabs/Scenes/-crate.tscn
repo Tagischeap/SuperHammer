@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1f0ffnr811qp"]
+[gd_scene load_steps=12 format=3 uid="uid://cvojx7mf4n81y"]
 
-[ext_resource type="Script" path="res://Scenes/Interactable/Create.gd" id="1_hjx31"]
-[ext_resource type="Texture2D" uid="uid://era05nbj7wus" path="res://Sprites/Crate.png" id="2_k0sat"]
+[ext_resource type="Script" path="res://Prefabs/Scripts/Crate.gd" id="1_floe4"]
+[ext_resource type="Texture2D" uid="uid://era05nbj7wus" path="res://Sprites/Crate.png" id="2_dda24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60jbb"]
 size = Vector2(32, 32)
@@ -57,21 +57,6 @@ tracks/0/keys = {
 "values": [1]
 }
 
-[sub_resource type="Animation" id="Animation_o5qe0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
 [sub_resource type="Animation" id="Animation_ysdfj"]
 resource_name = "Hurt 2"
 length = 0.25
@@ -104,6 +89,21 @@ tracks/0/keys = {
 "values": [3]
 }
 
+[sub_resource type="Animation" id="Animation_o5qe0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_to46t"]
 _data = {
 "Active": SubResource("Animation_j5o5g"),
@@ -114,35 +114,33 @@ _data = {
 "RESET": SubResource("Animation_o5qe0")
 }
 
-[node name="Create" type="StaticBody2D"]
-light_mask = 17
-visibility_layer = 8
-z_index = 1
+[node name="Crate" type="Node"]
+script = ExtResource("1_floe4")
+
+[node name="Crate" type="CharacterBody2D" parent="."]
 position = Vector2(475, 337)
-script = ExtResource("1_hjx31")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_k0sat")
-vframes = 5
-frame = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate"]
 shape = SubResource("RectangleShape2D_60jbb")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="Crate"]
+texture = ExtResource("2_dda24")
+vframes = 5
+frame = 1
+
+[node name="Hitbox" type="Area2D" parent="Crate"]
 light_mask = 16
 visibility_layer = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate/Hitbox"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_p44ts")
 debug_color = Color(0.854902, 0.313726, 0.486275, 0.419608)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Crate"]
+root_node = NodePath("../../..")
 autoplay = "Active"
 libraries = {
 "": SubResource("AnimationLibrary_to46t")
 }
-
-[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
